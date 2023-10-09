@@ -1,15 +1,15 @@
 import requests
 
-apikey = ''
+apikey = 'D7DF9194-3BC1-46B3-B0B3-BB90F1FAF25E'
 server = 'https://rest.coinapi.io'
 endpoint = '/v1/assets'
 
-ur = server + endpoint
+url = server + endpoint
 headers = {
-    'X-coinAPI-Key': apikey
+    'X-CoinAPI-Key': apikey
 }
 
-respuesta = requests.get(server, headers=headers)
+respuesta = requests.get(url, headers=headers)
 
 if respuesta.status_code == 200:
     json_respuesta = respuesta.json()
